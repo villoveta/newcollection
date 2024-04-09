@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>new collection</title>
+</head>
+<body>
+    <div class="trail"></div>
+
+    <div class="crop-container">
+        <div class="topimg"><img src="/images/image3.png" alt="Верх"></div>
+    </div>
+
+    <div id="gallery">
+        <div class=""><img src="/images/image1.png" alt="Изображение 1"></div>
+        <div class=""><img src="/images/image2.png" alt="Изображение 2"></div>
+    </div>
+
+    <div id="scrollToTopBtn" onclick="scrollToTop()">
+        <img src="/images/arrow_up.png" alt="Наверх">
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > (window.innerHeight / 2) || document.documentElement.scrollTop > (window.innerHeight / 2)) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentScroll - (currentScroll / 10));
+            }
+        }
+    </script>
+</body>
+</html>

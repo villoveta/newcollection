@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.trail {
+    cursor: url('/images/image4.png'), auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#gallery {
+    max-width: 800px;
+    margin: 30px auto 50px auto;
+    overflow: hidden;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 6px solid white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, bottom 0.5s; /* Добавляем плавный переход */
+    z-index: 1; /* Чтобы кнопка была поверх других элементов */
+}
+
+#scrollToTopBtn img {
+    width: 50px; /* Задаем ширину изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+#scrollToTopBtn:hover {
+    transform: rotate(90deg); /* Поворачиваем на 90 градусов при наведении */
+}
+
+.crop-container {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.crop-container img {
+    margin-top: 4%;
+    width: 800px;
+}
